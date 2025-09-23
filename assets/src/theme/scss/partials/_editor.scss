@@ -1,0 +1,18 @@
+/**
+ * Editor
+ *
+ * Helper class to style elements that are part of the user content and come from the_content() or ACF Wysiwyg Editor field. Keep in mind if you are styling Gutenberg blocks most of them have classes on them and can styled like that in wordpress/wordpress.scss.
+ */
+
+
+.editor {
+  // Reset top margin on first child.
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  // Reset bottom margin on last child.
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

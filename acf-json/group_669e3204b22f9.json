@@ -1,0 +1,42 @@
+{
+    "key": "group_669e3204b22f9",
+    "title": "Product fields",
+    "fields": [
+        {
+            "key": "field_669e36c90e0c0",
+            "label": "Product landing page URL",
+            "name": "product_landing_page_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/mennohenselmans.com\/online-pt-course\/",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1721644829
+}

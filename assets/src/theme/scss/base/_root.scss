@@ -1,0 +1,53 @@
+/**
+ * Root
+ */
+
+:root {
+  // Colors
+
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  // Grid
+
+  --grid-gutter-width: #{$grid-gutter-width};
+
+  // Type
+
+  --font-family-sans-serif: system-ui;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* stylelint-disable-line value-keyword-case */
+  --font-family-base: var(--font-family-sans-serif);
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-size-base: 1.6rem;
+  --font-weight-base: var(--font-weight-normal);
+  --line-height-base: 1.5;
+
+  --body-color: var(--black);
+  --body-bg: var(--white);
+
+  --link-color: var(--primary);
+  --link-decoration: none;
+  --link-hover-color: var(--black);
+  --link-hover-decoration: underline;
+
+  --type-spacing: #{$type-spacing};
+
+  --headings-font-family: var(--font-family-base);
+  --headings-font-weight: var(--font-weight-bold);
+  --headings-font-style: normal;
+  --headings-color: var(--black);
+  --headings-spacing: #{$headings-spacing};
+
+  // Tables
+
+  --table-padding: #{$table-padding};
+  --table-border-width: .1rem;
+  --table-border-color: var(--black);
+
+  // Code
+
+  --code-color: #d63384;
+  --pre-color: #666;
+}

@@ -1,0 +1,27 @@
+/**
+ * Tables
+ */
+
+
+.table {
+  width: 100%;
+  margin-bottom: $spacer;
+  color: inherit;
+  background-color: var(--white); // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding: var(--table-padding);
+    vertical-align: top;
+    border-top: $table-border-width solid var(--table-border-color);
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: calc($table-border-width * 2) solid var(--table-border-color);
+  }
+
+  tbody + tbody {
+    border-top: calc($table-border-width * 2) solid var(--table-border-color);
+  }
+}

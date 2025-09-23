@@ -1,0 +1,16 @@
+/**
+ * Colors
+ */
+
+
+@each $color, $value in $colors {
+  // Text color
+  .text-#{$color} {
+    color: var(--#{$color}) !important;
+  }
+
+  // Background color
+  .bg-#{$color} {
+    background-color: var(--#{$color}) !important;
+  }
+}

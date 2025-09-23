@@ -1,0 +1,17 @@
+/**
+ * Responsive console exports for JavaScript
+ */
+
+
+/* stylelint-disable function-name-case */
+/* stylelint-disable property-no-unknown */
+
+@import "~sass-to-js/sass/sass-to-js";
+@import "../theme/scss/abstracts/functions";
+@import "../theme/scss/abstracts/variables";
+
+:export { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+  breakpoints: sassToJs($grid-breakpoints);
+  setup: sassToJs($type-breakpoint-settings);
+  levels: sassToJs($type-scale);
+}

@@ -1,0 +1,108 @@
+# Copyright (C) 2025 Neuralab development team
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Playground 3.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/playground\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-09T09:13:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: playground\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Playground"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "WordPress starter theme"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Neuralab development team"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.neuralab.net"
+msgstr ""
+
+#: 404.php:2
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#. translators: %s is the site name.
+#: base-style-guide.php:26
+msgid "%s Style Guide"
+msgstr ""
+
+#: base-style-guide.php:34
+msgid "Style guide navigation"
+msgstr ""
+
+#. translators: %s is the command to run.
+#: functions.php:11
+msgid "Error locating autoloader. Please run %s in the theme directory."
+msgstr ""
+
+#. translators: %s is the file path.
+#: functions.php:57
+msgid "Error locating %s for inclusion."
+msgstr ""
+
+#: index.php:11
+msgid "Sorry, no results were found."
+msgstr ""
+
+#. translators: %s is the section ID.
+#: lib/class-pg-style-guide.php:167
+msgid "A section with ID \"%s\" already exists"
+msgstr ""
+
+#: lib/helpers.php:17
+msgid "News"
+msgstr ""
+
+#. translators: %s is the search term.
+#: lib/helpers.php:21
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: lib/helpers.php:25
+msgid "404 not found"
+msgstr ""
+
+#: lib/setup.php:23
+msgid "Header Navigation"
+msgstr ""
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "search input placeholder"
+msgid "Search"
+msgstr ""
+
+#: searchform.php:6
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: templates/entry-meta.php:5
+msgid "Author"
+msgstr ""
+
+#. translators: %s is the site name.
+#: templates/header.php:12
+msgid "%s logo"
+msgstr ""

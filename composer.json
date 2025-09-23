@@ -1,0 +1,33 @@
+{
+  "name": "neuralab/playground",
+  "description": "WordPress starter theme",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Neuralab development team",
+      "email": "development@neuralab.net"
+    }
+  ],
+  "require": {
+    "log1x/navi": "^3.1"
+  },
+  "require-dev": {
+    "php": ">=8.2",
+    "squizlabs/php_codesniffer": "^3.13",
+    "wp-coding-standards/wpcs": "^3.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.1"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "lint": "php ./vendor/bin/phpcs .",
+    "lint-source": "php ./vendor/bin/phpcs . --report=source",
+    "fix": "php ./vendor/bin/phpcbf .",
+    "create-pot": "wp i18n make-pot . languages/playground.pot --domain=playground"
+  }
+}

@@ -1,0 +1,77 @@
+/**
+ * Main SCSS
+ */
+
+
+/**
+ * Abstracts
+ */
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+/**
+ * Vendors
+ * Add vendors installed with NPM or vendors you manually copied to vendors folder.
+ */
+
+
+/**
+ * Vendor modifiers
+ * Add your vendor modifications to vendor-modifiers folder.
+ */
+
+
+/**
+ * Base
+ */
+@import "base/root";
+@import "base/reboot";
+@import "base/responsive-font-size";
+@import "base/containers";
+@import "base/grid";
+@import "base/typography";
+
+
+/**
+ * Components
+ */
+@import "components/icons";
+@import "components/tables";
+
+
+/**
+ * WordPress
+ * WordPress or WordPress plugin styles (IE: WooCommerce).
+ */
+@import "wordpress/wordpress";
+
+
+/**
+ * Partials
+ * Styling for partials like header, footer.
+ */
+@import "partials/header";
+@import "partials/editor";
+
+
+/**
+ * Templates
+ */
+
+
+/**
+ * Helpers
+ */
+@import "helpers/clearfix";
+@import "helpers/visually-hidden";
+
+
+/**
+ * Utilities
+ */
+@import "utilities/colors";
+@import "utilities/display";
+@import "utilities/flex";
+@import "utilities/spacing";

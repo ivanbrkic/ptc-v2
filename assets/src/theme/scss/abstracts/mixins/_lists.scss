@@ -1,0 +1,22 @@
+/**
+ * Lists
+ */
+
+
+/**
+ * List unstyled
+ */
+@mixin list-unstyled() {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/**
+ * List styled
+ */
+@mixin list-styled() {
+  > li:not(:last-child) {
+    margin-bottom: $spacer;
+  }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<ruleset name="Playground">
+  <!-- Include WordPress coding standards. -->
+  <rule ref="WordPress">
+    <!-- Disable Generic.Functions.CallTimePassByReference rule since it will be deprecated (https://github.com/PHPCSStandards/PHP_CodeSniffer/issues/921). -->
+    <exclude name="Generic.Functions.CallTimePassByReference"/>
+    <!-- Disable @package tag rule. -->
+    <exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
+    <!-- Disable missing parameter comment rule. -->
+    <exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+    <!-- Disable spacing after param type in function comment. -->
+    <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
+    <!-- Disable missing return comment for @throws tag rule. -->
+    <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
+    <!-- Disable space after function rule in multiline function declaration. -->
+    <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/>
+    <!-- Disable Yoda conditions rule. -->
+    <exclude name="WordPress.PHP.YodaConditions"/>
+    <!-- Disable short array syntax rule. -->
+    <exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+  </rule>
+
+  <!-- Exclude paths and patterns. -->
+  <exclude-pattern>/vendor/*</exclude-pattern>
+  <exclude-pattern>/node_modules/*</exclude-pattern>
+  <exclude-pattern>*.js</exclude-pattern>
+  <exclude-pattern>*.css</exclude-pattern>
+
+  <!--Only check PHP files. -->
+  <arg name="extensions" value="php"/>
+
+  <!-- List of functions that don't need escaping. -->
+  <rule ref="WordPress.Security.EscapeOutput">
+    <properties>
+      <property name="customAutoEscapedFunctions" type="array">
+        <element value="pg_assets"/>
+        <element value="pg_style_guide"/>
+        <element value="pg_get_page_header"/>
+        <element value="pg_get_pagination"/>
+      </property>
+    </properties>
+  </rule>
+
+  <!-- Allow closing tags in some places. -->
+  <rule ref="PSR2.Files.ClosingTag.NotAllowed">
+    <exclude-pattern>*/**</exclude-pattern>
+    <include-pattern>*/functions.php</include-pattern>
+    <include-pattern>*/lib/*</include-pattern>
+  </rule>
+
+  <!-- Allow missing file comments in some places. -->
+  <rule ref="Squiz.Commenting.FileComment.Missing">
+    <exclude-pattern>*/**</exclude-pattern>
+    <include-pattern>*/functions.php</include-pattern>
+    <include-pattern>*/lib/*</include-pattern>
+  </rule>
+
+  <!-- Allow spacing after doc comments in some style guide. -->
+  <rule ref="Squiz.Commenting.FileComment.SpacingAfterComment">
+    <exclude-pattern>style-guide/*</exclude-pattern>
+  </rule>
+
+  <!-- Set allowed text domains. -->
+  <rule ref="WordPress.WP.I18n">
+    <properties>
+      <property name="text_domain" type="array">
+        <element value="playground"/>
+      </property>
+    </properties>
+  </rule>
+</ruleset>

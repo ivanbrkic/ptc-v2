@@ -1,0 +1,137 @@
+/**
+ * Grid
+ */
+
+
+/**
+ * Make container
+ */
+
+@mixin make-container($gutter: var(--grid-gutter-width)) {
+  width: 100%;
+  padding-inline: calc($gutter / 2);
+  margin-inline: auto;
+}
+
+/**
+ * Make row
+ */
+@mixin make-row($gutter: var(--grid-gutter-width)) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: calc($gutter / 2 * -1);
+}
+
+
+/**
+ * Make column ready
+ */
+@mixin make-col-ready($gutter: var(--grid-gutter-width)) {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-inline: calc($gutter / 2);
+}
+
+
+/**
+ * Make column
+ */
+@mixin make-col($size: false, $columns: $grid-columns) {
+  @if $size {
+    flex: 0 0 auto;
+    width: percentage(divide($size, $columns));
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+
+/**
+ * Make column auto
+ */
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+
+/**
+ * Make column offset
+ */
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: divide($size, $columns);
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+
+/**
+ * Make row columns
+ */
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: percentage(divide(1, $count));
+  }
+}
+
+
+/**
+ * Generate the grid
+ */
+@mixin make-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex: 1 0 0%; // https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      @if $grid-row-columns > 0 {
+        .row-cols#{$infix}-auto > * {
+          @include make-col-auto;
+        }
+
+        @for $i from 1 through $grid-row-columns {
+          .row-cols#{$infix}-#{$i} {
+            @include row-cols($i);
+          }
+        }
+      }
+
+      .col#{$infix}-auto {
+        @include make-col-auto;
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) { // Avoid creating .offset-0
+            .offset#{$infix}-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+
+      @each $key, $value in $gutters {
+        .g#{$infix}-#{$key} {
+          margin-inline: calc($value / 2 * -1);
+
+          > * {
+            padding-inline: calc($value / 2);
+          }
+        }
+      }
+    }
+  }
+}

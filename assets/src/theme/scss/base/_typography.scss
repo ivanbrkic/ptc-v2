@@ -1,0 +1,103 @@
+/**
+ * Typography
+ */
+
+ /* montserrat-regular - latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-600 - latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-700 - latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/**
+ * Headings
+ */
+
+%heading-base {
+  font-family: var(--headings-font-family);
+  font-style: var(--headings-font-style);
+  font-weight: var(--headings-font-weight);
+  color: var(--headings-color);
+  margin-bottom: var(--headings-spacing);
+}
+
+h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-after */
+  @extend %heading-base;
+}
+
+
+/**
+ * Paragraph
+ */
+
+p {
+  margin-bottom: var(--type-spacing);
+}
+
+
+/**
+ * Thematic Break (Horizontal Rule)
+ */
+
+hr {
+  margin-block: var(--type-spacing);
+}
+
+
+/**
+ * Block Quotation
+ */
+
+blockquote {
+  margin-bottom: var(--type-spacing);
+}
+
+
+/**
+ * Lists
+ */
+
+ol,
+ul {
+  padding-left: calc($spacer * 3);
+}
+
+ol,
+ul,
+dl {
+  margin-bottom: var(--type-spacing);
+}
+
+// List unstyled helper
+
+%list-unstyled,
+.list-unstyled {
+  @include list-unstyled;
+}
+
+// List styled helper
+
+%list-styled,
+.list-styled {
+  @include list-styled;
+}

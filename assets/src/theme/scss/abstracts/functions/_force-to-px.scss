@@ -1,0 +1,14 @@
+/**
+ * Force to PX
+ */
+
+
+@function force-to-px($value) {
+  $ret: $value;
+
+  @if (unit($value) == rem) {
+    $ret: calc(strip-unit($value) * $rem-size);
+  }
+
+  @return $ret;
+}

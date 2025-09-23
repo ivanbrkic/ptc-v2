@@ -1,0 +1,15 @@
+/**
+ * Strip unit
+ */
+
+// We have to use `sass:math` and `sass:meta` to ensure compatibility with Dart Sass, as using calc() for this calculation is not supported anymore.
+@use "sass:math";
+@use "sass:meta";
+
+@function strip-unit($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}

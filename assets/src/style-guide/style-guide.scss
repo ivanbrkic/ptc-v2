@@ -1,0 +1,313 @@
+/**
+ * Style guide
+ */
+
+
+/* stylelint-disable scss/media-feature-value-dollar-variable */
+
+
+/**
+ * Variables
+ */
+
+$black:     #000;
+$gray-dark: #424242;
+$gray:      #8a8a8a;
+$white:     #fff;
+
+$primary: #f2b808;
+
+$spacing:    12px;
+$spacing-xl: calc($spacing * 4);
+$spacing-lg: calc($spacing * 2);
+$spacing-sm: calc($spacing / 2);
+
+$border:        1px solid $gray;
+$border-radius: 4px;
+
+$header-height:  56px;
+$offset-top:     calc($header-height + $spacing);
+$sidebar-offset: 52px;
+
+
+/**
+ * Main elements
+ */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.style-guide-header,
+.style-guide-content,
+.style-guide-footer {
+  padding: $spacing $spacing-lg;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+}
+
+.style-guide-header,
+.style-guide-footer {
+  color: $black;
+  background-color: $primary;
+  border-top: $border;
+  border-bottom: $border;
+}
+
+.style-guide-header {
+  background-color: $primary;
+  position: sticky;
+  top: 0;
+  height: $header-height;
+  z-index: 10;
+
+  > h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    align-self: center;
+
+    > a {
+      color: $black;
+      text-decoration: none;
+      transition: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.style-guide-main {
+  overflow: hidden;
+}
+
+.style-guide-footer > p {
+  margin-bottom: 0;
+}
+
+.style-guide-sidebar {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.style-guide-sidebar__nav {
+  padding-top: $spacing-lg;
+}
+
+.style-guide-sidebar__list,
+.style-guide-sidebar__sub-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.style-guide-sidebar__list-header {
+  font-size: 20px;
+  padding-inline: $spacing-sm;
+  color: $gray;
+}
+
+.style-guide-sidebar__list > li:not(:last-child) {
+  margin-bottom: $spacing-lg;
+}
+
+.style-guide-sidebar__sub-list {
+  margin-top: $spacing;
+  padding-top: $spacing;
+  border-top: $border;
+
+  /* stylelint-disable no-descending-specificity */
+  > li {
+    &:not(:last-child) {
+      margin-bottom: $spacing-sm;
+    }
+
+    > a {
+      display: inline-block;
+      padding: $spacing-sm;
+      transition: none;
+      color: $black;
+      border-radius: $border-radius;
+
+      &,
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+@media (min-width: 768px) {
+  .style-guide-header,
+  .style-guide-content,
+  .style-guide-footer {
+    grid-template-columns: 2fr 4fr;
+  }
+
+  .style-guide-header > h1,
+  .style-guide-footer > p {
+    grid-column-start: 2;
+  }
+
+  .style-guide-sidebar {
+    position: sticky;
+    top: $offset-top;
+    height: calc(100vh - ($header-height + $sidebar-offset));
+    overflow-y: auto;
+  }
+
+  .style-guide-sidebar__nav {
+    padding-top: $sidebar-offset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .style-guide-header,
+  .style-guide-content,
+  .style-guide-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .style-guide-main {
+    grid-column: 2 / 6;
+  }
+
+  .style-guide-header > h1,
+  .style-guide-footer > p {
+    grid-column-end: 6;
+  }
+}
+
+.style-guide-section {
+  margin-bottom: $spacing-xl;
+  scroll-margin-top: $offset-top;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    margin-block: $spacing-lg;
+    font-weight: 400;
+    line-height: 1.5;
+
+    /* stylelint-disable no-descending-specificity */
+    a {
+      transition: none;
+
+      &,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > h1 { font-size: 48px; }
+  > h2 { font-size: 40px; }
+  > h3 { font-size: 32px; }
+  > h4 { font-size: 24px; }
+  > h5 { font-size: 20px; }
+  > h6 { font-size: 16px; }
+
+  > h1 { /* stylelint-disable-line no-duplicate-selectors */
+    padding-bottom: $spacing;
+    border-bottom: $border;
+  }
+}
+
+
+/**
+ * Example elements
+ */
+
+.style-guide-example {
+  padding: $spacing-lg;
+  border: $border;
+  border-radius: $border-radius;
+  background-color: $white;
+  margin-bottom: $spacing-lg;
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.style-guide-example--inv {
+  background-color: $gray-dark;
+}
+
+.style-guide-example--full-width {
+  padding-right: 0;
+  padding-left: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.style-guide-example--grid [class^="col"] {
+  border: 1px solid $primary;
+  background-color: rgba($primary, .2);
+  padding-block: $spacing;
+  text-align: center;
+}
+
+.style-guide-example--flex div {
+  border: 1px solid $primary;
+  background-color: rgba($primary, .2);
+  text-align: center;
+}
+
+.style-guide-color-box {
+  aspect-ratio: 1 / 1;
+}
+
+.style-guide-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacing-lg;
+  background-color: $white;
+
+  th,
+  td {
+    padding: $spacing;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid $gray;
+  }
+
+  thead th {
+    vertical-align: bottom;
+  }
+}
+
+.style-guide-table--inv {
+  color: $white;
+  background-color: $gray-dark;
+
+  th,
+  td {
+    border-color: $white;
+  }
+}
+
+.style-guide-table--fixed-layout {
+  table-layout: fixed;
+}

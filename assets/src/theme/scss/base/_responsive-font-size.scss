@@ -1,0 +1,250 @@
+/**
+ * Responsive font size
+ */
+
+
+/* stylelint-disable */
+
+$render-data: ();
+$wait: ();
+$type-breakpoint-settings-clean: ();
+$queries: ();
+/** 1. Populate fluid $wait list */
+@each $breakpoint, $heading-set in $type-breakpoint-settings {
+  @each $heading, $level in $heading-set {
+    // klase
+    @if (type-of($level) == map) {
+      $temp: nth(map-keys(map-get($heading-set, $heading)), 1);
+      $wait: append(
+        $wait,
+        (
+          breakpoint: $breakpoint,
+          heading: $heading,
+          level: $temp,
+        )
+      );
+      $heading-set: map-remove(
+        $heading-set,
+        $heading
+      ); // remove fluid headings to save into clean set
+    }
+  }
+  $type-breakpoint-settings-clean: map-merge(
+    $type-breakpoint-settings-clean,
+    (
+      $breakpoint: $heading-set,
+    )
+  );
+}
+// 2. find "to" and save to $render-data
+@each $from in $wait {
+  // @debug FROM $from;
+  $passed: false;
+  $found: false;
+  @each $breakpoint, $heading-set in $type-breakpoint-settings {
+    @if not $found {
+      @if $passed {
+        // @debug $breakpoint;
+        @each $heading, $level in $heading-set {
+          @if $heading == map-get($from, heading) {
+            // @debug $heading;
+            $found: true;
+
+            @if type-of($level) == 'map' {
+              // get rid of maps in levels, don't need them any more
+              $temp: nth(map-keys($level), 1); // get first key of a list
+              $level: $temp;
+            }
+            $to: (
+              breakpoint: $breakpoint,
+              heading: $heading,
+              level: $level,
+            );
+            $render-data: append(
+              $render-data,
+              (
+                from: $from,
+                to: $to,
+              )
+            );
+          }
+        }
+      }
+      @if ($breakpoint == map-get($from, breakpoint)) {
+        $passed: true; // passed the breakpoint where fluid "from" is defined - start looking for first "same heading" def
+      }
+    }
+  }
+  // @debug '------------------------';
+}
+// 2. define queries for fluid
+$queries: ();
+@each $breakpoint, $pixels in $grid-breakpoints {
+  $queries: map-merge(
+    $queries,
+    (
+      $pixels: (),
+    )
+  );
+}
+@each $one in $render-data {
+  // @debug $one;
+  $from: map-get($one, from);
+  $to: map-get($one, to);
+  // @debug '--------------------------';
+  // @debug from $from;
+  // @debug to $to;
+  $pixels: map-get($grid-breakpoints, map-get($from, breakpoint));
+  $from-rules: map-get($type-scale, map-get($from, level));
+  $to-rules: map-get($type-scale, map-get($to, level));
+  // @debug '--------------------------';
+  // @debug $from-rules;
+  // @debug $to-rules;
+  //check for font-size
+  @if (
+    map-has-key($from-rules, font-size) and map-has-key($to-rules, font-size)
+  ) {
+    // both have font sizes
+    // @debug both have sizes;
+    $min-vw: map-get($grid-breakpoints, map-get($from, breakpoint));
+    $max-vw: map-get($grid-breakpoints, map-get($to, breakpoint));
+    $min-font-size: map-get($from-rules, font-size);
+    $max-font-size: map-get($to-rules, font-size);
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+    // @debug $min-vw $max-vw $min-font-size $max-font-size;
+    // force rem to px
+    $min-vw: force-to-px($min-vw);
+    $max-vw: force-to-px($max-vw);
+    $min-font-size: force-to-px($min-font-size);
+    $max-font-size: force-to-px($max-font-size);
+    // @debug ----- $min-vw $max-vw $min-font-size $max-font-size;
+
+    //@debug $u1 $u2 $u3 $u4;
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      // all units are the same
+      $pixellist: map-get($queries, $pixels);
+      $pixellist: map-merge(
+        $pixellist,
+        (
+          map-get($from, heading): (
+            font-size:
+              calc(
+                #{$min-font-size} +
+                  #{strip-unit($max-font-size - $min-font-size)} *
+                  ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+              ),
+          ),
+        )
+      );
+      $queries: map-merge(
+        $queries,
+        (
+          $pixels: $pixellist,
+        )
+      );
+    }
+  }
+  // other rules
+  $set-rules: $from-rules;
+  @each $set-rule in map-keys($set-rules) {
+    // skip font-size
+    @if $set-rule != font-size {
+      $heading: map-get($from, heading);
+      $pixellist: map-get($queries, $pixels);
+      $rules: map-get($pixellist, $heading);
+      @if $rules {
+        $rules: map-merge(
+          $rules,
+          (
+            $set-rule: map-get($set-rules, $set-rule),
+          )
+        );
+      } @else {
+        $rules: (
+          $set-rule: map-get($set-rules, $set-rule),
+        );
+      }
+      $pixellist: map-merge(
+        $pixellist,
+        (
+          $heading: $rules,
+        )
+      );
+      $queries: map-merge(
+        $queries,
+        (
+          $pixels: $pixellist,
+        )
+      );
+    }
+  }
+}
+// define regular queries
+@each $breakpoint, $heading-set in $type-breakpoint-settings-clean {
+  // regular
+  $pixels: map-get($grid-breakpoints, $breakpoint);
+  @if (length($heading-set) != 0) {
+    // do not render empty breakpoints
+    /* #{$breakpoint} */
+    @each $heading in map-keys($heading-set) {
+      $level: map-get($heading-set, $heading);
+      $set-rules: map-get($type-scale, $level);
+      @each $set-rule in map-keys($set-rules) {
+        $pixellist: map-get($queries, $pixels);
+        $rules: map-get($pixellist, $heading);
+        @if $rules {
+          $rules: map-merge(
+            $rules,
+            (
+              $set-rule: map-get($set-rules, $set-rule),
+            )
+          );
+        } @else {
+          $rules: (
+            $set-rule: map-get($set-rules, $set-rule),
+          );
+        }
+        $pixellist: map-merge(
+          $pixellist,
+          (
+            $heading: $rules,
+          )
+        );
+        $queries: map-merge(
+          $queries,
+          (
+            $pixels: $pixellist,
+          )
+        );
+      }
+    }
+  }
+}
+/** display all queries! */
+@each $pixels, $set in $queries {
+  @if $pixels==0 {
+    /** skip media (min-width: 0) render */
+    @each $heading, $value in $set {
+      #{$heading} {
+        @each $left, $right in $value {
+          #{$left}: #{$right};
+        }
+      }
+    }
+  } @else {
+    @media (min-width: #{$pixels}) {
+      @each $heading, $value in $set {
+        #{$heading} {
+          @each $left, $right in $value {
+            #{$left}: #{$right};
+          }
+        }
+      }
+    }
+  }
+}
+/* [End Render heading rules] */

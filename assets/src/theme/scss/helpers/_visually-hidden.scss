@@ -1,0 +1,9 @@
+/**
+ * Visually hidden
+ */
+
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) { /* stylelint-disable-line selector-not-notation */
+  @include visually-hidden;
+}

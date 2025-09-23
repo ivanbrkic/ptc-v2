@@ -1,0 +1,171 @@
+/**
+ * WordPress
+ */
+
+
+/**
+ * Gutenberg blocks
+ */
+
+.wp-block-image,
+.wp-block-quote,
+.wp-block-embed,
+.wp-block-video {
+  margin-bottom: var(--type-spacing);
+}
+
+// List
+
+.wp-block-list {
+  @extend %list-styled;
+
+  > li > .wp-block-list {
+    margin-top: $spacer;
+    margin-bottom: 0;
+  }
+}
+
+// Image
+
+.wp-block-image {
+  .aligncenter,
+  .alignright,
+  .alignleft {
+    display: table; // 1
+    margin-bottom: inherit;
+
+    figcaption {
+      display: table-caption; // 2
+      caption-side: bottom; // 2
+    }
+
+    // 1 - Make all img with alignment to act like tables.
+    // 2 - Make the caption wide as the img.
+  }
+
+  .aligncenter {
+    // Center the center aligned image.
+    margin-inline: auto;
+  }
+
+  // Change image alignment on larger screens.
+  @include media-breakpoint-up(sm) {
+    .aligncenter {
+      // Clear any floated images.
+      clear: both;
+    }
+
+    .alignleft {
+      margin-right: calc($spacer * 3);
+      float: left;
+    }
+
+    .alignright {
+      float: right;
+      margin-left: calc($spacer * 3);
+    }
+  }
+}
+
+// Gallery
+
+.wp-block-gallery {
+  @include make-row;
+
+  .wp-block-image,
+  .blocks-gallery-caption {
+    @include make-col-ready;
+    margin-bottom: var(--type-spacing);
+  }
+
+  .wp-block-image {
+    @include make-col(3);
+  }
+
+  .blocks-gallery-caption {
+    @include make-col(12);
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+// Embed
+
+.wp-block-embed {
+  iframe {
+    max-width: 100%; // Prevent iframe from getting bigger than the parent.
+  }
+}
+
+.wp-block-embed__wrapper {
+  // Make the embed responsive only if it has .wp-has-aspect-ratio class.
+  .wp-has-aspect-ratio & {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+
+    &::before {
+      display: block;
+      content: "";
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  // Define aspect ratios.
+  /* stylelint-disable declaration-colon-space-after, selector-descendant-combinator-no-non-space, block-closing-brace-space-before */
+  .wp-embed-aspect-21-9 &::before { padding-top: percentage(calc(9 / 21)); }
+  .wp-embed-aspect-18-9 &::before { padding-top: percentage(calc(9 / 18)); }
+  .wp-embed-aspect-16-9 &::before { padding-top: percentage(calc(9 / 16)); }
+  .wp-embed-aspect-4-3  &::before { padding-top: percentage(calc(3 / 4));  }
+  .wp-embed-aspect-1-1  &::before { padding-top: percentage(calc(1 / 1));  }
+  .wp-embed-aspect-9-16 &::before { padding-top: percentage(calc(16 / 9)); }
+  .wp-embed-aspect-1-2  &::before { padding-top: percentage(calc(2 / 1));  }
+  /* stylelint-enable declaration-colon-space-after, selector-descendant-combinator-no-non-space, block-closing-brace-space-before */
+}
+
+// Video
+
+.wp-block-video video {
+  display: block;
+}
+
+// Captions
+
+.wp-element-caption {
+  margin-top: $spacer;
+}
+
+
+/**
+ * Screen reader text
+ */
+
+.screen-reader-text {
+  @include visually-hidden;
+}
+
+
+/**
+ * Comment form
+ */
+
+.comment-form {
+  label {
+    margin-top: $spacer;
+  }
+}
+
+.form-submit {
+  margin-top: $spacer;
+}
