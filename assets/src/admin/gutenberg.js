@@ -18,10 +18,10 @@ wp.domReady(() => {
 
   // Unregister blocks.
   // Define the blocks we support.
-  const allowedBlocks = new Set(['core/paragraph', 'core/heading', 'core/list', 'core/list-item', 'core/image', 'core/quote', 'core/gallery', 'core/embed', 'core/video']);
+  const allowedBlocks = new Set(['core/shortcode', 'core/paragraph', 'core/heading', 'core/list', 'core/list-item', 'core/image', 'core/quote', 'core/gallery', 'core/embed', 'core/video']);
   // Unregister all blocks that are not the ones we support.
   wp.blocks.getBlockTypes().forEach(blockType => {
-    if (!allowedBlocks.has(blockType.name)) {
+    if (!allowedBlocks.has(blockType.name) && !blockType.name.includes('learndash')) {
       wp.blocks.unregisterBlockType(blockType.name);
     }
   });

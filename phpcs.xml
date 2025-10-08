@@ -18,7 +18,15 @@
     <exclude name="WordPress.PHP.YodaConditions"/>
     <!-- Disable short array syntax rule. -->
     <exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+    <!-- Disable invalid end char in inline comment rule. -->
+    <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+    <!-- Disable wrong style in function comment rule. -->
+    <exclude name="Squiz.Commenting.FunctionComment.WrongStyle"/>
+
+		<!-- Disable missing return comment for @throws tag rule. -->
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
   </rule>
+
 
   <!-- Exclude paths and patterns. -->
   <exclude-pattern>/vendor/*</exclude-pattern>
@@ -64,7 +72,7 @@
   <rule ref="WordPress.WP.I18n">
     <properties>
       <property name="text_domain" type="array">
-        <element value="playground"/>
+        <element value="ptc"/>
       </property>
     </properties>
   </rule>

@@ -5,28 +5,28 @@
  /* montserrat-regular - latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
-  src: url('/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* montserrat-600 - latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  src: url('/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* montserrat-700 - latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 700;
-  src: url('//wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/wp-content/themes/ptc-v2/assets/static/fonts/montserrat-v30-latin-ext-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /**
@@ -38,11 +38,12 @@
   font-style: var(--headings-font-style);
   font-weight: var(--headings-font-weight);
   color: var(--headings-color);
-  margin-bottom: var(--headings-spacing);
+  margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-after */
   @extend %heading-base;
+	line-height: 1.2;
 }
 
 
@@ -51,7 +52,7 @@ h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-a
  */
 
 p {
-  margin-bottom: var(--type-spacing);
+  margin-bottom: 0;
 }
 
 
@@ -60,7 +61,7 @@ p {
  */
 
 hr {
-  margin-block: var(--type-spacing);
+  margin-block: $spacer * 2;
 }
 
 
@@ -69,7 +70,7 @@ hr {
  */
 
 blockquote {
-  margin-bottom: var(--type-spacing);
+  margin-bottom: 0;
 }
 
 
@@ -85,7 +86,7 @@ ul {
 ol,
 ul,
 dl {
-  margin-bottom: var(--type-spacing);
+  margin-bottom: 0;
 }
 
 // List unstyled helper
@@ -100,4 +101,24 @@ dl {
 %list-styled,
 .list-styled {
   @include list-styled;
+}
+
+.t-title {
+  font-size: 1.2rem !important;
+}
+
+.t-title-2 {
+  font-size: 1.1rem !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.highlight {
+	line-height: 1;
+  background: var(--red);
+  color: var(--white);
+  padding: 0 3px;
+	margin: 0 2px 0 3px;
+	// font-weight: var(--font-weight-semibold);
+	// text-transform: uppercase;
+	// letter-spacing: 0.2em;
 }

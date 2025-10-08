@@ -17,17 +17,17 @@
 		 */
 		do_action( 'get_header' );
 		?>
+		<div class="site">
+			<?php get_template_part( 'templates/header' ); ?>
 
-		<?php get_template_part( 'templates/header' ); ?>
+			<main class="main">
+				<div class="wrapper">
+					<?php require Pg_Wrapper::$main_template; ?>
+				</div>
+			</main>
 
-		<main class="main">
-			<div class="container-fluid">
-				<?php require Pg_Wrapper::$main_template; ?>
-			</div>
-		</main>
-
-		<?php get_template_part( 'templates/footer' ); ?>
-
+			<?php get_template_part( 'templates/footer' ); ?>
+		</div>
 		<?php
 		/**
 		 * Add get_footer hook so other plugins can hook in.

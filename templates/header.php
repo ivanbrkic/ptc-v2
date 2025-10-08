@@ -1,43 +1,62 @@
-<header class="header">
-	<div class="container-fluid">
-		<div class="header__inner">
-			<a class="header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<?php
-				echo Pg_Assets::get_theme_img(
-					'logo.png',
-					[
-						'loading'  => 'eager',
-						'decoding' => 'auto',
-						/* translators: %s is the site name. */
-						'alt'      => sprintf( esc_attr__( '%s logo', 'playground' ), esc_attr( get_bloginfo( 'name' ) ) ),
-					]
-				);
-				?>
-			</a>
-
-			<?php $header_navigation = ( new Log1x\Navi\Navi() )->build( 'header_navigation' ); ?>
-			<?php if ( $header_navigation->isNotEmpty() ) { ?>
-				<nav class="header__navigation">
-					<ul class="list-unstyled d-flex">
-						<?php foreach ( $header_navigation->all() as $header_navigation_item ) : ?>
-							<li>
-								<?php
-								$link_classes = [ 'd-block', 'p-2' ];
-								if ( $header_navigation_item->active ) {
-									$link_classes[] = 'text-black';
-								} else {
-									$link_classes[] = 'text-white';
-								}
-								?>
-
-								<a class="<?php echo esc_attr( join( ' ', $link_classes ) ); ?>" href="<?php echo esc_url( $header_navigation_item->url ); ?>">
-									<?php echo esc_html( $header_navigation_item->label ); ?>
+<?php
+if ( in_array( 'ld-in-focus-mode', get_body_class(), true ) ) {
+	return;
+}
+if ( is_checkout() ) :
+	?>
+	<header class="header zi-5">
+		<div class="wrapper">
+			<div class="branding">
+				<a href="javascript: history.go(-1)" class="back-link">
+					<img class="" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/dist/theme/img/logo.svg' ); ?>" alt="Menno Henselmans logo">
+				</a>
+			</div>
+		</div>
+	</header>
+<?php else : ?>
+	<header class="header zi-5">
+		<div class="wrapper">
+			<div class="header__inner">
+				<?php get_template_part( 'templates/branding' ); ?>
+				<nav class="main-navigation" role="navigation">
+					<?php
+					$courses = learndash_user_get_enrolled_courses( get_current_user_id() );
+					if ( $courses && is_array( $courses ) ) {
+						if ( count( $courses ) > 2 ) {
+							$courses = array_slice( $courses, 0, 2 );
+						}
+						foreach ( $courses as $course_id ) {
+							?>
+							<li class="main-navigation__item">
+								<a href="<?php echo esc_url( learndash_get_course_url( $course_id ) ); ?>" class="main-navigation__link flex-line-05">
+									<?php	echo get_the_title( $course_id ); ?>
 								</a>
 							</li>
-						<?php endforeach; ?>
-					</ul>
+							<?php
+						}
+					}
+					?>
+					<li class="main-navigation__item">
+						<a href="<?php echo get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ); ?>" class="main-navigation__link flex-line-05">
+							<img src="/wp-content/themes/ptc-v2/assets/dist/theme/img/account-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
+							<?php
+							if ( is_user_logged_in() ) {
+								esc_html_e( 'My account', 'ptc' );
+							} else {
+								esc_html_e( 'Login', 'ptc' );
+							}
+							?>
+						</a>
+					</li>
 				</nav>
-			<?php } ?>
+				<div class="menu-toggle__container">
+					<div class="menu-toggle js-menu-toggle">
+						<div class="menu-toggle__stripe"></div>
+						<div class="menu-toggle__stripe"></div>
+						<div class="menu-toggle__stripe"></div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</header>
+	</header>
+<?php	endif; ?>

@@ -17,3 +17,17 @@
   // Create columns.
   @include make-grid-columns;
 }
+
+.wrapper {
+  max-width: 1240px;
+  padding: 0 $spacer;
+  margin: 0 auto;
+  width: 100%;
+	@include media-breakpoint-up(sm) {
+		padding: 0 $spacer * 2;
+	}
+}
+
+.site {
+  overflow: hidden;
+}

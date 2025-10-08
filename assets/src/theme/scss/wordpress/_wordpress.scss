@@ -11,14 +11,15 @@
 .wp-block-quote,
 .wp-block-embed,
 .wp-block-video {
-  margin-bottom: var(--type-spacing);
+  margin-bottom: $spacer * 2;
 }
 
 // List
 
 .wp-block-list {
-  @extend %list-styled;
-
+	> li {
+		margin-bottom: $spacer/4;
+	}
   > li > .wp-block-list {
     margin-top: $spacer;
     margin-bottom: 0;
@@ -75,7 +76,7 @@
   .wp-block-image,
   .blocks-gallery-caption {
     @include make-col-ready;
-    margin-bottom: var(--type-spacing);
+    margin-bottom: $spacer * 2;
   }
 
   .wp-block-image {

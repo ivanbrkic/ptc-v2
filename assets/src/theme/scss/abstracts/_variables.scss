@@ -12,11 +12,33 @@ $rem-size: 10px;
 /**
  * Colors
  */
+$black: #000;
+$primary: #1d386a;
+$blue: #3261b8;
+$base: #2b2b2b;
+$whitesmoke: #f5f5f5;
+$blacksmoke: #252525;
+$smoke: #ddd;
+$gray: #afafaf;
+$gray-dark: #747474;
+$gray-darker: #343434;
+$red: #cf2027;
+$green: #5ba95a;
 
 $colors: (
   "white":   #fff,
   "black":   #000,
-  "primary": #f2b808,
+	"blacksmoke": $blacksmoke,
+  "primary": $primary,
+  "base": $base,
+  "whitesmoke": $whitesmoke,
+  "smoke": $smoke,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
+  "gray-darker": $gray-darker,
+  "red": $red,
+  "blue": $blue,
+  "green": $green,
 );
 
 
@@ -24,14 +46,17 @@ $colors: (
  * Spacing
  */
 
-$spacer: .8rem;
+$spacer: 2rem;
 
 $spacers: (
   0: 0,
+  "05": calc($spacer * .5),
   1: calc($spacer * 1),
   2: calc($spacer * 2),
   3: calc($spacer * 3),
   4: calc($spacer * 4),
+  5: calc($spacer * 5),
+  6: calc($spacer * 6),
 );
 
 
@@ -43,7 +68,7 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
+  lg: 1024px,
   xl: 1200px,
 );
 
@@ -52,7 +77,7 @@ $grid-breakpoints: (
 @include assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 $grid-columns:      12;
-$grid-gutter-width: 24px;
+$grid-gutter-width: 40px;
 
 // Setting that creates grid classes.
 $enable-grid-classes: true;
@@ -72,7 +97,7 @@ $gutters: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
+  lg: 1024px,
   xl: 1140px,
 );
 
@@ -118,9 +143,6 @@ $trans-timing-function-base: ease-out;
 
 $type-scale: ();
 
-$type-spacing:     calc($spacer * 3);
-$headings-spacing: $type-spacing;
-
 // Type breakpoint settings.
 
 $type-breakpoint-settings: (
@@ -138,3 +160,5 @@ $type-breakpoint-settings: (
 
 $table-padding:      $spacer;
 $table-border-width: .1rem;
+
+$ld-header-height: 90px;

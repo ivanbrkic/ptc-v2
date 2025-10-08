@@ -51,6 +51,7 @@ body {
   line-height: var(--line-height-base);
   text-align: left;
   color: var(--body-color);
+  overflow-x: hidden;
 }
 
 
@@ -61,12 +62,11 @@ body {
 // 1. Reset Firefox's gray color
 
 hr {
-  color: var(--black); // 1
+  background-color: var(--smoke);
+  height: 1px;
   margin: 0;
   border: 0;
-  border-top: .1rem solid var(--black);
 }
-
 
 /**
  * Typography
@@ -175,6 +175,7 @@ a {
   color: var(--link-color);
   text-decoration: var(--link-decoration);
   transition: color $trans-duration-base $trans-timing-function-base;
+  text-underline-offset: 2px !important;
 
   &:hover {
     color: var(--link-hover-color);

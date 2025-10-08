@@ -15,30 +15,28 @@
 
   // Type
 
-  --font-family-sans-serif: system-ui;
+  --font-family-sans-serif: Montserrat, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* stylelint-disable-line value-keyword-case */
   --font-family-base: var(--font-family-sans-serif);
   --font-weight-normal: 400;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-size-base: 1.6rem;
   --font-weight-base: var(--font-weight-normal);
-  --line-height-base: 1.5;
+  --line-height-base: 1.7;
 
-  --body-color: var(--black);
+  --body-color: var(--base);
   --body-bg: var(--white);
 
   --link-color: var(--primary);
-  --link-decoration: none;
+  --link-decoration: underline;
   --link-hover-color: var(--black);
   --link-hover-decoration: underline;
-
-  --type-spacing: #{$type-spacing};
 
   --headings-font-family: var(--font-family-base);
   --headings-font-weight: var(--font-weight-bold);
   --headings-font-style: normal;
-  --headings-color: var(--black);
-  --headings-spacing: #{$headings-spacing};
+  --headings-color: var(--primary);
 
   // Tables
 

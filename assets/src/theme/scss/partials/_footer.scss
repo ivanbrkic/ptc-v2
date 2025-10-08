@@ -1,0 +1,15 @@
+.footer {
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: var(--whitesmoke);
+	padding: $spacer * 2 0;
+
+	&__navigation {
+		ul {
+			display: flex;
+			gap: $spacer;
+			justify-content: center;
+			font-weight: var(--font-weight-semibold);
+		}
+	}
+}

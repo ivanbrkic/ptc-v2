@@ -1,0 +1,115 @@
+#ld-comments-form {
+  display: none !important;
+}
+
+#ld-comments-post-button {
+  display: none;
+}
+
+.ld-tabs-content iframe {
+  width: 100%;
+}
+
+// hide progress bar for enrolled students
+.learndash-wrapper .ld-course-status.ld-course-status-enrolled {
+  display: none;
+}
+
+.wp-block-file {
+  font-size: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid var(--whitesmoke);
+  border-bottom: 1px solid var(--whitesmoke);
+  padding-bottom: 1em;
+  align-items: stretch;
+
+  &__button {
+    display: none;
+  }
+}
+
+.wp-block-file__embed[type="application/pdf"] + a,
+.wp-block-file > a:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 2;
+  margin: 0;
+  margin-top: $spacer / 2;
+  background-color: var(--whitesmoke);
+  padding: $spacer/2 $spacer;
+  transition: border-left .3s ease;
+  border-left: 0 solid transparent;
+
+  &:hover {
+    border-left: 10px solid var(--primary);
+  }
+
+  &::before {
+    background-image: url(/wp-content/themes/ptc-v2/assets/dist/theme/img/pdf.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+}
+
+.wp-block-file > a:first-child {
+  margin-top: 1rem;
+}
+
+.wp-block-file > a:first-child + a {
+  margin-top: 1rem;
+}
+
+.wp-iframe-wrap {
+  overflow: hidden;
+
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 1.5em;
+
+  iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.wpdiscuz-bell-shortcode-menu {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: .5em 0;
+  order: 3;
+
+  > li {
+    padding: 0 $spacer;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+
+    > a {
+      vertical-align: middle;
+    }
+  }
+}
+
+.wun-bell {
+  fill: var(--white) !important;
+}
+
+.page-profile {
+  article.page .entry-header {
+    display: none;
+  }
+}

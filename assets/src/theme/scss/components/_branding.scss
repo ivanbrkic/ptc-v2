@@ -1,0 +1,48 @@
+.branding {
+  display: flex;
+  align-items: center;
+  padding: $spacer 0;
+  flex-shrink: 0;
+
+  @at-root [dir="rtl"] & {
+    display: flex;
+  }
+
+  &__logo {
+    width: 370px;
+  }
+
+  &__logo-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-up(lg) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__link {
+    @extend %reset-link;
+    display: flex;
+    align-items: center;
+    gap: calc(18px * 21 / 25);
+  }
+
+  &__logo-text {
+    font-size: 1.3rem;
+    margin-top: 7px;
+  }
+
+  &__logo-right {
+    zoom: .9;
+    transform: translate(0, 6%);
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

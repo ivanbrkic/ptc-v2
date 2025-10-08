@@ -1,0 +1,24 @@
+@for $i from 1 through 10 {
+  .zi-#{$i} {
+    z-index: #{$i};
+  }
+}
+
+.flex-line {
+  display: flex;
+  gap: $spacer / 2;
+  align-items: center;
+}
+
+.flex-line-05 {
+  display: flex;
+  gap: $spacer / 4;
+  align-items: center;
+}
+
+%reset-link {
+  --link-color: currentColor;
+  --link-decoration: none;
+  --link-hover-color: currentColor;
+  --link-hover-decoration: none;
+}
