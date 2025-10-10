@@ -12,9 +12,9 @@ add_action('wp_enqueue_scripts', function () {
 }, 1000);
 
 add_action('learndash-focus-content-title-before', function () {
-	echo '<div class="the-content">';
+	echo '<div class="wrapper"><div class="the-content">';
 }, 1000);
 
 add_action('learndash-focus-content-end', function () {
-	echo '</div>';
+	echo '</div></div>';
 }, 1000);
