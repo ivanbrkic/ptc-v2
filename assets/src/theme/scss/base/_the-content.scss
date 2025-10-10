@@ -11,6 +11,7 @@
 
   h1 {
     @extend .t-h1;
+		margin-bottom: $spacer * 3;
   }
 
   h2 {

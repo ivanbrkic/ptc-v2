@@ -140,17 +140,4 @@
 		white-space: nowrap;
   }
   border-bottom: 1px solid $blue-transparent;
-
-	h1 {
-		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: -16px;
-			left: 0;
-			width: 50px;
-			height: 5px;
-			background: $red;
-		}
-	}
 }

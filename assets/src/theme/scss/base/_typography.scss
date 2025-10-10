@@ -111,6 +111,16 @@ dl {
   @include media-breakpoint-down(md) {
     font-size: calc($size * .66);
   }
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -16px;
+		left: 0;
+		width: 50px;
+		height: 5px;
+		background: $red;
+	}
 }
 
 .t-h2 {

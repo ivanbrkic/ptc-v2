@@ -70,7 +70,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 	padding: 0;
 	padding-left: $spacer;
 	min-height: 70px;
-	background-color: $primary !important;
+	background-color: var(--whitesmoke) !important;
 }
 .learndash-wrapper .ld-focus .ld-focus-sidebar .ld-focus-sidebar-trigger {
 	position: static;
@@ -85,7 +85,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 		transform: none;
 		width: 30px;
 		height: 30px;
-		color: var(--white) !important;
+		color: var(--base) !important;
 		background: transparent !important;
 	}
 }
@@ -289,10 +289,6 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
 	padding: 0 !important;
-	padding-top: calc($spacer * 3) !important;
-	padding-bottom: calc($spacer * 3) !important;
-	padding-left: 0 !important;
-	padding-right: 0 !important;
 	margin: 0 !important;
 }
 
@@ -363,7 +359,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 #ld-focus-mode-course-heading {
 	@extend %reset-link;
-	font-weight: var(--font-weight-semibold);
+	font-weight: var(--font-weight-normal);
 	> .ld-icon {
 		display: none;
 	}
