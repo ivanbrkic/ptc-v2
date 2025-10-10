@@ -21,9 +21,7 @@
 			<?php get_template_part( 'templates/header' ); ?>
 
 			<main class="main">
-				<div class="wrapper">
 					<?php require Pg_Wrapper::$main_template; ?>
-				</div>
 			</main>
 
 			<?php get_template_part( 'templates/footer' ); ?>

@@ -11,17 +11,17 @@
 .wp-block-quote,
 .wp-block-embed,
 .wp-block-video {
-  margin-bottom: $spacer * 2;
+  margin-bottom: calc($spacer * 2);
 }
 
 // List
 
 .wp-block-list {
 	> li {
-		margin-bottom: $spacer/4;
+		margin-bottom: calc($spacer / 4);
 	}
   > li > .wp-block-list {
-    margin-top: $spacer;
+    margin-top: calc($spacer);
     margin-bottom: 0;
   }
 }
@@ -76,7 +76,7 @@
   .wp-block-image,
   .blocks-gallery-caption {
     @include make-col-ready;
-    margin-bottom: $spacer * 2;
+    margin-bottom: calc($spacer * 2);
   }
 
   .wp-block-image {
@@ -144,7 +144,7 @@
 // Captions
 
 .wp-element-caption {
-  margin-top: $spacer;
+  margin-top: calc($spacer);
 }
 
 
@@ -163,10 +163,10 @@
 
 .comment-form {
   label {
-    margin-top: $spacer;
+    margin-top: calc($spacer);
   }
 }
 
 .form-submit {
-  margin-top: $spacer;
+  margin-top: calc($spacer);
 }

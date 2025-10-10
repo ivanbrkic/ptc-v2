@@ -476,31 +476,7 @@
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent.ld-status-complete,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent:hover, .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-transparent:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join.ld-button-reverse,
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join.ld-button-reverse {
   background: white;
@@ -511,11 +487,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:hover,
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:hover {
   background-color: #0e2a90;
@@ -646,11 +618,7 @@
   outline-width: 2px;
   outline-style: solid;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:disabled:hover.ld-button-transparent:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:disabled:hover.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:disabled:hover.ld-button-transparent:hover,
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:disabled:hover.ld-button-transparent:hover {
   background: transparent;
@@ -666,11 +634,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:disabled:hover:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:disabled:hover:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .btn-join:disabled:hover:hover,
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #btn-join:disabled:hover:hover {
   background-color: #0e2a90;
@@ -708,41 +672,8 @@
   background-color: #728188;
   opacity: 1;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button {
-  margin: 0;
-  border-radius: 20px;
-  background-color: var(--blue);
-  color: white;
-  box-shadow: none;
-  text-transform: none;
-  font-family: inherit;
-  font-weight: 800;
-  font-size: 0.75em;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  width: 100%;
-  max-width: 385px;
-  white-space: normal;
-  text-shadow: none;
-  border: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 1em;
-  line-height: 1.25em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button .ld-icon {
-  font-size: 0.875em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button .ld-text {
-  padding: 0 1em;
-  flex: 1 1 100;
-  text-align: center;
-}
+
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button + .ld-button {
   margin-left: 1em;
 }
@@ -788,25 +719,8 @@
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent:hover, .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -815,13 +729,8 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button:hover {
-  background-color: #0e2a90;
-}
+
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button[disabled] {
   background-color: #f6f8fa !important;
   color: #73738c !important;
@@ -832,11 +741,8 @@
   background-color: #a7adc2 !important;
   color: #0e0e2c !important;
 }
-@media (max-width: 960px) {
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button {
-    max-width: 100%;
-  }
-}
+
+
 
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button .ld-icon {
   transition: all ease-in-out 250ms;
@@ -847,15 +753,8 @@
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-button:hover .ld-icon-arrow-left {
   transform: translateX(-3px);
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) a:not(.button):not(.screen-reader-shortcut) {
-  text-decoration: none;
-  text-shadow: none;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) a:not(.button):not(.screen-reader-shortcut):hover {
-  text-decoration: none;
-}
+
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern).ld-container {
   display: flex;
   padding: 0 2em;
@@ -897,196 +796,14 @@
     width: 100%;
   }
 }
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .sfwd-mark-complete::after,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #sfwd-mark-complete::after {
-  font-family: "ld-icons" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  content: "\e906";
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  padding-right: 0.15em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button {
-  margin: 0;
-  border-radius: 20px;
-  background-color: var(--blue);
-  color: white;
-  box-shadow: none;
-  text-transform: none;
-  font-family: inherit;
-  font-weight: 800;
-  font-size: 0.75em;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  width: 100%;
-  max-width: 385px;
-  white-space: normal;
-  text-shadow: none;
-  border: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 1em;
-  line-height: 1.25em;
-  background-color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button .ld-icon,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button .ld-icon {
-  font-size: 0.875em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button .ld-text,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button .ld-text {
-  padding: 0 1em;
-  flex: 1 1 100;
-  text-align: center;
-}
+
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button + .ld-button,
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button + .ld-button {
-  margin-left: 1em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-compact,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-compact {
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  flex-basis: 24px;
-  flex-shrink: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-compact .ld-icon,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-compact .ld-icon {
-  margin-right: 0;
-  font-size: 0.75em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-compact .ld-text,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-compact .ld-text {
-  padding: 0;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-alternate,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-alternate {
-  background: transparent;
-  color: var(--blue);
-  padding: 0;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-alternate .ld-icon,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-alternate .ld-icon {
-  background: var(--blue);
-  color: white;
-  border-radius: 100%;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  padding: 2px;
-  line-height: 16px;
-  text-align: center;
-  font-weight: bold;
-  transition: color 0.3s ease, background 0.3s ease;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-alternate .ld-text,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-alternate .ld-text {
-  padding-left: 0.5em;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-alternate:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-alternate:hover {
-  background: transparent;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent.ld-status-complete,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent:hover, .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-transparent:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-reverse,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-reverse {
-  background: white;
-  color: var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button.ld-button-reverse:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button.ld-button-reverse:hover {
-  background: var(--blue);
-  color: white;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button:focus,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button:hover {
-  background-color: #0e2a90;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button[disabled],
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button[disabled] {
-  background-color: #f6f8fa !important;
-  color: #73738c !important;
-  cursor: not-allowed;
-  outline: 2px solid #73738c !important;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button[disabled]:hover,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button[disabled]:hover {
-  background-color: #a7adc2 !important;
-  color: #0e0e2c !important;
-}
-@media (max-width: 960px) {
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button,
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button {
-    max-width: 100%;
-  }
+  margin-left: $spacer;
 }
 
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button:disabled,
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button:disabled {
-  cursor: pointer; /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  background: #4c4c4c !important;
-}
-@media (max-width: 768px) {
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button,
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button {
-    max-width: 100%;
-    line-height: 1.5em;
-    white-space: normal;
-  }
-}
+
+
 
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions {
   clear: both;
@@ -1096,35 +813,10 @@
   justify-content: space-between;
 }
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action {
-  flex-basis: 200px;
+  flex-basis: auto;
   position: relative;
-  padding: 5px;
 }
 
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back {
-  display: block;
-  font-size: 0.75em;
-  margin: 10px auto 0 auto;
-  text-align: center;
-  text-decoration: underline;
-  width: 100%;
-}
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back:hover {
-  text-decoration: none;
-}
-@media (max-width: 960px) {
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back {
-    padding: 1.25em;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media (max-width: 768px) {
-  .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back {
-    padding: 1.25em;
-    display: block;
-  }
-}
 
 @media (max-width: 960px) {
   .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action {
@@ -1740,25 +1432,7 @@
 .learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent:hover, .learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -1767,10 +1441,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .ld-item-list .ld-item-search .ld-item-search-fields .ld-item-search-submit .ld-button:hover {
   background-color: #0e2a90;
 }
@@ -2445,25 +2116,7 @@
 .learndash-wrapper .ld-expand-button.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .ld-expand-button.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .ld-expand-button.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .ld-expand-button.ld-button-transparent:hover, .learndash-wrapper .ld-expand-button.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .ld-expand-button.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .ld-expand-button.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .ld-expand-button.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -2472,10 +2125,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .ld-expand-button:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .ld-expand-button:hover {
   background-color: #0e2a90;
 }
@@ -2501,20 +2151,7 @@
 .learndash-wrapper .ld-expand-button.ld-button-alternate .ld-text {
   text-align: left;
 }
-.learndash-wrapper .ld-status {
-  border-radius: 12px;
-  background-color: #e2e7ed;
-  text-align: center;
-  padding: 5px 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: 11px;
-  line-height: 1.1;
-  color: #333333;
-  display: block;
-  margin-bottom: 5px;
-}
+
 .learndash-wrapper .ld-status.ld-tooltip [role=tooltip] {
   line-height: unset;
   letter-spacing: initial;
@@ -3078,31 +2715,7 @@
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent.ld-status-complete,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent:hover, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent:hover,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-transparent:hover,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_button.ld-button-reverse,
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_button2.ld-button-reverse {
   background: white;
@@ -3113,11 +2726,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_button2:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_button:hover,
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_button2:hover {
   background-color: #0e2a90;
@@ -3232,25 +2841,7 @@
 .learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent:hover, .learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .wpProQuiz_content a#quiz_continue_link.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -3259,10 +2850,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .wpProQuiz_content a#quiz_continue_link:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .wpProQuiz_content a#quiz_continue_link:hover {
   background-color: #0e2a90;
 }
@@ -3879,25 +3467,7 @@
 .learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent:hover, .learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit].ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -3906,10 +3476,7 @@
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit]:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .wpProQuiz_content form[name=uploadEssay] input[type=submit]:hover {
   background-color: #0e2a90;
 }
@@ -3989,13 +3556,7 @@
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewLegend {
   clear: both;
 }
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewLegend .learndash-quiz-review-legend-item-current .wpProQuiz_reviewQuestion_Target,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewLegend .learndash-quiz-review-legend-item-current .wpProQuiz_reviewQuestion_Target {
-  background-color: #4a4a68;
-  color: var(--ld-color-system-white);
-  outline-color: #3259eb;
-  outline-offset: 2px;
-}
+
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewLegend .learndash-quiz-review-legend-item-review .wpProQuiz_reviewColor_Review,
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewLegend .learndash-quiz-review-legend-item-review .wpProQuiz_reviewColor_Review {
   background-color: #eb7100;
@@ -4078,13 +3639,7 @@
   border-color: var(--ld-color-system-text-dark);
   color: var(--ld-color-system-white);
 }
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion li:focus, .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionSkip:focus, .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionReview:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewQuestion li:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionSkip:focus,
-.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionReview:focus {
-  outline-offset: 2px;
-  outline: 2px solid #3259eb;
-}
+
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionSolved,
 .learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewSummary .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionSolved {
   background-color: var(--ld-color-system-light-1);
@@ -4353,11 +3908,9 @@
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  line-height: 1.25em;
+  @extend %reset-link;
 }
-.learndash-wrapper .ld-course-navigation .ld-lesson-item-preview a.ld-lesson-item-preview-heading {
-  color: #495255;
-}
+
 .learndash-wrapper .ld-course-navigation .ld-lesson-item-preview a.ld-lesson-item-preview-heading:hover {
   color: var(--blue);
 }
@@ -4621,25 +4174,7 @@
 #wpProQuiz_overlay_close.ld-button-alternate:hover {
   background: transparent;
 }
-#wpProQuiz_overlay_close.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-#wpProQuiz_overlay_close.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-#wpProQuiz_overlay_close.ld-button-transparent:hover, #wpProQuiz_overlay_close.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-#wpProQuiz_overlay_close.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-#wpProQuiz_overlay_close.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 #wpProQuiz_overlay_close.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -4648,10 +4183,7 @@
   background: var(--blue);
   color: white;
 }
-#wpProQuiz_overlay_close:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 #wpProQuiz_overlay_close:hover {
   background-color: #0e2a90;
 }
@@ -4853,7 +4385,8 @@
   display: inline;
 }
 .learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments li a {
-  font-weight: 700;
+  font-weight: var(--font-weight-semibold);
+	text-decoration: none;
 }
 .learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments li:after {
   content: '>' /*rtl:'<'*/;
@@ -4870,7 +4403,7 @@
   color: #fff;
 }
 .learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-complete {
-  background: var(--blue);
+  background: var(--green);
   color: #fff;
 }
 
@@ -5241,14 +4774,10 @@
   margin: 0px auto;
   max-width: 960px;
 }
-.learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content h1 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0.5em;
-}
+
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content .ld-topic-status,
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content .ld-lesson-status {
-  margin-bottom: 1em;
+  margin-bottom: calc($spacer  * 2);
 }
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content .ld-topic-status .ld-progress,
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content .ld-lesson-status .ld-progress {
@@ -5361,43 +4890,7 @@
 .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete:disabled:after {
   color: #617175;
 }
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button {
-  color: inherit;
-  background: transparent;
-}
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button.ld-status-complete,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button.ld-status-complete,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button.ld-status-complete,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button:hover, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:focus,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_incomplete_button,
 .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_incomplete_button {
   color: #333333;
@@ -5412,10 +4905,7 @@
   width: 100%;
   max-width: 90%;
 }
-.learndash-wrapper .ld-focus .ld-focus-header .ld-content-action {
-  flex: 0 1;
-  flex-grow: 3;
-}
+
 .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action .sfwd-mark-complete,
 .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action #sfwd-mark-complete {
   margin: 0 1em;
@@ -5468,16 +4958,17 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--blue);
+  border-bottom: 5px solid var(--primary);
   z-index: -1;
 }
 .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-user-menu-items a {
+	@extend %reset-link;
   position: relative;
   display: block;
   white-space: nowrap;
-  background-color: var(--blue);
+  background-color: var(--primary);
   color: white;
-  font-weight: 700;
+  font-weight: var(--font-weight-normal);
   padding: 0.75em 2.5em;
   font-size: 0.875em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -6940,25 +6431,7 @@ body.ld-in-focus-mode.admin-bar {
 .learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-alternate:hover {
   background: transparent;
 }
-.learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent {
-  color: var(--blue);
-  background: transparent;
-}
-.learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent.ld-status-complete {
-  color: var(--blue);
-}
-.learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent:hover, .learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent:focus {
-  outline-width: 2px;
-  outline-style: solid;
-}
-.learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent:focus {
-  outline-offset: 2px;
-  outline-color: var(--blue);
-}
-.learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-transparent:hover {
-  background: transparent;
-  outline-color: #0e2a90;
-}
+
 .learndash-wrapper .ld-focus-comments .form-submit #submit.ld-button-reverse {
   background: white;
   color: var(--blue);
@@ -6967,10 +6440,7 @@ body.ld-in-focus-mode.admin-bar {
   background: var(--blue);
   color: white;
 }
-.learndash-wrapper .ld-focus-comments .form-submit #submit:focus {
-  outline-offset: 2px;
-  outline: 2px solid var(--blue);
-}
+
 .learndash-wrapper .ld-focus-comments .form-submit #submit:hover {
   background-color: #0e2a90;
 }

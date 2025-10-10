@@ -7,7 +7,7 @@
 		<span class="d-block t-title-2">
 		Onze studieadviseurs staan voor je klaar:
 		</span>
-		<a class="flex-line button-custom mt-1" target="_blank" href="https://wa.me/31613911140">
+		<a class="flex-line button-whatsapp mt-1" target="_blank" href="https://wa.me/31613911140">
 			<img src="/wp-content/themes/ptc-v2/assets/dist/theme/img/wa.svg" alt="">
 			Chat op WhatsApp</a>
 	</div>

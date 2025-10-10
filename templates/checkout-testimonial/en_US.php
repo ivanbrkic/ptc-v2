@@ -33,7 +33,7 @@ if ( $item_sku && strpos( $item_sku, 'PDC' ) !== false  ) { // PDC
 		</h3>
 		Email <a href="mailto:info@mennohenselmans.com">info@mennohenselmans.com</a> or chat with us on WhatsApp.
 <br>
-		<a class="flex-line button-custom mt-1" target="_blank" href="https://wa.me/31613911140">
+		<a class="flex-line button-whatsapp mt-1" target="_blank" href="https://wa.me/31613911140">
 			<img src="/wp-content/themes/ptc-v2/assets/dist/theme/img/wa.svg" alt="">
 			Chat on WhatsApp</a>
 	</div>
@@ -72,7 +72,7 @@ if ( $item_sku && strpos( $item_sku, 'PDC' ) !== false  ) { // PDC
 		<span class="d-block">
 			Our study advisors are here to help:
 		</span>
-		<a class="flex-line button-custom mt-05" target="_blank" href="https://wa.me/31613911140">
+		<a class="flex-line button-whatsapp mt-05" target="_blank" href="https://wa.me/31613911140">
 			<img src="/wp-content/themes/ptc-v2/assets/dist/theme/img/wa.svg" alt="">
 			Chat on WhatsApp</a>
 	</div>

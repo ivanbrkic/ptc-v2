@@ -2,7 +2,7 @@
  * Typography
  */
 
- /* montserrat-regular - latin-ext */
+/* montserrat-regular - latin-ext */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: Montserrat;
@@ -43,7 +43,7 @@
 
 h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-after */
   @extend %heading-base;
-	line-height: 1.2;
+  line-height: 1.2;
 }
 
 
@@ -61,7 +61,7 @@ p {
  */
 
 hr {
-  margin-block: $spacer * 2;
+  margin-block: calc($spacer * 2);
 }
 
 
@@ -103,6 +103,35 @@ dl {
   @include list-styled;
 }
 
+.t-h1 {
+  $size: 5.2rem;
+  font-size: $size;
+	font-weight: var(--font-weight-normal);
+
+  @include media-breakpoint-down(md) {
+    font-size: calc($size * .66);
+  }
+}
+
+.t-h2 {
+	font-weight: var(--font-weight-normal);
+	$size: 3.2rem;
+    font-size: $size;
+
+    @include media-breakpoint-down(md) {
+      font-size: calc($size * .66);
+    }
+}
+
+.t-h3 {
+	$size: 2.6rem;
+    font-size: $size;
+
+    @include media-breakpoint-down(md) {
+      font-size: calc($size * .66);
+    }
+}
+
 .t-title {
   font-size: 1.2rem !important;
 }
@@ -113,12 +142,13 @@ dl {
 }
 
 .highlight {
-	line-height: 1;
+  line-height: 1;
   background: var(--red);
   color: var(--white);
   padding: 0 3px;
-	margin: 0 2px 0 3px;
-	// font-weight: var(--font-weight-semibold);
-	// text-transform: uppercase;
-	// letter-spacing: 0.2em;
+  margin: 0 2px 0 3px;
+
+  // font-weight: var(--font-weight-semibold);
+  // text-transform: uppercase;
+  // letter-spacing: 0.2em;
 }

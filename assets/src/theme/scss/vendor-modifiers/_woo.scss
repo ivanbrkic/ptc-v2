@@ -156,7 +156,7 @@
     margin-right: 0;
     transition: box-shadow .3s ease, background-color .3s ease;
     display: flex;
-    gap: $spacer/2;
+    gap: calc($spacer / 2);
     align-items: center;
 
     &:hover {
@@ -406,7 +406,7 @@ form.woocommerce-checkout > .blockUI.blockOverlay {
 
 .woocommerce-MyAccount-navigation-link a {
   @extend %reset-link;
-  padding: $spacer / 2;
+  padding: calc($spacer / 2);
   display: flex;
   font-weight: var(--font-weight-semibold);
 }

@@ -7,47 +7,30 @@
   h5,
   h6 {
     margin-bottom: $spacer;
-    font-weight: var(--font-weight-bold);
   }
 
   h1 {
-    $size: 5.2rem;
-    font-size: $size;
-    margin-bottom: $spacer * 2;
-
-    @include media-breakpoint-down(md) {
-      font-size: calc($size * .66);
-    }
+    @extend .t-h1;
   }
 
   h2 {
-    $size: 3.2rem;
-    font-size: $size;
-
-    @include media-breakpoint-down(md) {
-      font-size: calc($size * .66);
-    }
+    @extend .t-h2;
   }
 
   h3 {
-    $size: 2.6rem;
-    font-size: $size;
-
-    @include media-breakpoint-down(md) {
-      font-size: calc($size * .66);
-    }
+    @extend .t-h3;
   }
 
 
   hr {
-    margin-block: $spacer * 2;
+    margin-block: calc($spacer * 2);
   }
 
   p,
   ul,
   ol,
   dl {
-    margin-bottom: $spacer / 2;
+    margin-bottom: calc($spacer / 2);
   }
 
   * + h1,
@@ -56,6 +39,6 @@
   * + h4,
   * + h5,
   * + h6 {
-    margin-top: $spacer * 2;
+    margin-top: calc($spacer * 2);
   }
 }

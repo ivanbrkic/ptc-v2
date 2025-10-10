@@ -2,7 +2,7 @@
 	text-align: center;
 	font-size: 1.2rem;
 	background-color: var(--whitesmoke);
-	padding: $spacer * 2 0;
+	padding: calc($spacer * 2) 0;
 
 	&__navigation {
 		ul {

@@ -1,0 +1,53 @@
+.push {
+  @extend %reset-link;
+  display: inline-flex;
+  padding: calc($spacer / 2) $spacer;
+  color: var(--white);
+  background: var(--primary);
+  gap: calc($spacer / 2);
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 0;
+	border: 1px solid transparent;
+  transition: color .3s ease-in-out, background .3s ease-in-out;
+	line-height: 1;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    background: var(--blue);
+    color: var(--white);
+  }
+
+	@at-root .ld-focus-header & {
+		background: transparent;
+		&:hover {
+			background: $blue;
+		}
+	}
+}
+
+.push--outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $blue-transparent;
+    color: var(--primary);
+  }
+}
+
+.push--raw {
+	color: inherit;
+	background: transparent;
+	&:hover,
+  &:focus,
+  &:active {
+    background: $blue-transparent;
+		color: inherit;
+  }
+}

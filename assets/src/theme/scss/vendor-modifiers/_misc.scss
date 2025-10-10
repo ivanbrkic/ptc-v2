@@ -22,7 +22,8 @@
   justify-content: space-between;
   border-top: 1px solid var(--whitesmoke);
   border-bottom: 1px solid var(--whitesmoke);
-  padding-bottom: 1em;
+  margin-top: calc($spacer * 2);
+	margin-bottom: calc($spacer * 2);
   align-items: stretch;
 
   &__button {
@@ -32,14 +33,15 @@
 
 .wp-block-file__embed[type="application/pdf"] + a,
 .wp-block-file > a:first-child {
+	@extend %reset-link;
   display: flex;
   align-items: center;
   gap: 20px;
   flex-grow: 2;
   margin: 0;
-  margin-top: $spacer / 2;
+  margin-top: calc($spacer / 2);
   background-color: var(--whitesmoke);
-  padding: $spacer/2 $spacer;
+  padding: calc($spacer / 2) $spacer;
   transition: border-left .3s ease;
   border-left: 0 solid transparent;
 

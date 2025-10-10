@@ -5,6 +5,7 @@
 
 .learndash-wrapper .ld-focus-comments__comments {
   overflow: visible !important;
+	max-height: none !important;
 }
 
 .learndash-wrapper .ld-focus .ld-focus-sidebar .ld-focus-sidebar-wrapper {
@@ -35,7 +36,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 	display: flex;
 	flex: 0 0 auto;
 	@include media-breakpoint-up(md) {
-		padding-right: $spacer * 2;
+		padding-right: calc($spacer * 2);
 	}
 	@include media-breakpoint-between(md, lg) {
 		padding-right: $spacer;
@@ -49,8 +50,8 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 	margin-left: -$spacer;
 	margin-right: -$spacer;
 	@include media-breakpoint-up(sm) {
-		margin-left: -$spacer * 2;
-		margin-right: -$spacer * 2;
+		margin-left: calc($spacer * -2);
+		margin-right: calc($spacer * -2);
 	}
 	@include media-breakpoint-up(md) {
 		margin-left: 0;
@@ -97,21 +98,6 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
   }
 }
 
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button,
-.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:hover,
-.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button {
-  &:hover,
-  &:focus,
-  &:active {
-    outline: 0;
-  }
-}
-
-.learndash-wrapper:not(.ld-registration__outer-wrapper, .learndash-wrapper--modern) .sfwd-mark-complete::after,
-.learndash-wrapper:not(.ld-registration__outer-wrapper, .learndash-wrapper--modern) #sfwd-mark-complete::after {
-  display: none;
-}
 
 
 .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action {
@@ -121,6 +107,8 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu {
 	border: 0;
 	padding-right: 0;
+	align-self: stretch;
+	height: auto;
 }
 
 
@@ -165,7 +153,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
   position: relative;
   align-items: center;
   justify-content: flex-start;
-  padding: $spacer / 2 $spacer;
+  padding: calc($spacer / 2) $spacer;
   overflow: hidden;
 }
 
@@ -173,7 +161,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
   position: relative;
   z-index: 1;
-  padding: $spacer/2;
+  padding: calc($spacer / 2);
 }
 
 .learndash-wrapper .ld-progress .ld-progress-bar .ld-progress-bar-percentage {
@@ -199,7 +187,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 .learndash-wrapper .ld-course-navigation .ld-lesson-item.ld-is-current-lesson .ld-lesson-item-preview-heading,
 .learndash-wrapper .ld-course-navigation .ld-lesson-item.ld-is-current-lesson .ld-lesson-title {
-  color: var(--body-color) !important;
+	color: var(--body-color) !important;
   font-weight: var(--font-weight-semibold);
 	font-size: 1.4rem;
 	line-height: 2rem;
@@ -257,12 +245,18 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
   margin-bottom: 0;
   border-radius: 0;
   padding: 7px $spacer; // total height 24px to match collapse button
-	font-size: 11px;
-	line-height: calc(10 / 11);
+	font-size: 1.2rem;
+	line-height: calc(10 / 12);
+  background-color: var(--whitesmoke);
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+	font-weight: var(--font-weight-semibold);
 }
 
 .learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-details .ld-expand-button {
 	margin-left: $spacer;
+	border-radius: 0;
 }
 
 .learndash-wrapper #ld-profile .ld-section-heading {
@@ -281,35 +275,12 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 	background-color: var(--green) !important;
 }
 
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .learndash_mark_complete_button, .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) #learndash_mark_complete_button {
-	border-radius: 0;
-	line-height: 1.25em;
-	text-align: center;
-	&:hover, &:focus, &:active {
-		outline: 0;
-	}
-}
-
-.learndash-wrapper .ld-button,
-.learndash-wrapper .ld-expand-button {
-	border-radius: 0 !important;
-	&:hover, &:focus, &:active {
-		outline: 0;
-	}
-}
-
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back:hover {
-	text-decoration: var(--link-hover-decoration);
-}
-
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action .ld-course-step-back {
-	margin: 0;
-	font-size: 0.75em;
-	padding: 1em;
-}
-
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action {
 	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: calc($spacer/2);
 }
 
 .learndash-wrapper .ld-breadcrumbs a {
@@ -318,8 +289,8 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
 	padding: 0 !important;
-	padding-top: $spacer * 3 !important;
-	padding-bottom: $spacer * 3 !important;
+	padding-top: calc($spacer * 3) !important;
+	padding-bottom: calc($spacer * 3) !important;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 	margin: 0 !important;
@@ -333,8 +304,8 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 
 
-.learndash-wrapper .ld-focus .ld-focus-header .ld-content-action.ld-empty {
-	display: none;
+.ld-content-action.ld-empty {
+	display: none !important;
 }
 
 .learndash-wrapper .ld-focus.ld-focus-sidebar-collapsed .ld-focus-sidebar {
@@ -391,6 +362,7 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 }
 
 #ld-focus-mode-course-heading {
+	@extend %reset-link;
 	font-weight: var(--font-weight-semibold);
 	> .ld-icon {
 		display: none;
@@ -441,16 +413,38 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 .learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions {
 	border-top: 0;
-}
-
-.learndash-wrapper:not(.ld-registration__outer-wrapper):not(.learndash-wrapper--modern) .ld-content-actions .ld-content-action {
-	flex-basis: auto;
-}
-
-.ld-focus-content .ld-content-action {
-	margin-bottom: $spacer / 2 !important;
+	align-items: flex-start;
 }
 
 .learndash-wrapper .ld-status-icon.ld-status-complete .ld-icon {
 	font-size: 1.2rem;
+}
+
+.ld-button,
+.ld-course-step-back,
+.learndash_mark_complete_button {
+	@extend .push;
+	.ld-icon {
+		font-size: 10px;
+		display: block;
+		width: 12px;
+			height: 12px;
+			position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.ld-course-step-back {
+	@extend .push--raw;
+}
+
+input.learndash_mark_complete_button {
+	&:after {
+		display: none;
+	}
 }

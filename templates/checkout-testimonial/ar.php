@@ -37,7 +37,7 @@ if ( $contents ) {
 		<span class="d-block">
 		مستشارونا الدراسيون جاهزون لمساعدتك
 		</span>
-		<a class="flex-line button-custom mt-05" target="_blank" href="https://wa.me/31613911140">
+		<a class="flex-line button-whatsapp mt-05" target="_blank" href="https://wa.me/31613911140">
 			<img src="/wp-content/themes/ptc-v2/assets/dist/theme/img/wa.svg" alt="">
 			تواصل معنا على واتساب
 		</a>

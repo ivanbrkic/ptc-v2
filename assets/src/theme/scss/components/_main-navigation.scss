@@ -17,10 +17,10 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: $spacer / 2 0;
+  gap: calc($spacer / 2) 0;
 
   @include media-breakpoint-up(sm) {
-    padding: $spacer $spacer * 2;
+    padding: $spacer calc($spacer * 2);
   }
 
   @include media-breakpoint-up(lg) {
@@ -53,7 +53,7 @@
 
   &__link {
     @extend %reset-link;
-    padding: $spacer / 4 $spacer / 2;
+    padding: calc($spacer / 4) calc($spacer / 2);
     display: flex;
     justify-content: flex-end;
     text-align: right;
