@@ -39,6 +39,8 @@ if ( $item_sku && strpos( $item_sku, 'PDC' ) !== false  ) { // PDC
 	</div>
 </div>
 	<?php
+} else if ( $item_sku && strpos( $item_sku, 'DUBAI' ) !== false  ) {
+// DUBAI SEMINAR
 } else {
 ?>
 	<div blog-id="<?php echo get_current_blog_id(); ?>">
