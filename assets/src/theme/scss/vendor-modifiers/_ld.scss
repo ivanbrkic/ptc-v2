@@ -4,7 +4,6 @@
 }
 
 .learndash-wrapper .ld-focus-comments__comments {
-  overflow: visible !important;
 	max-height: none !important;
 }
 
@@ -289,7 +288,8 @@ body.admin-bar .learndash-wrapper .ld-focus-sidebar {
 
 .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
 	padding: 0 !important;
-	margin: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .learndash-wrapper .ld-focus .ld-focus-header .ld-content-actions {
@@ -443,4 +443,8 @@ input.learndash_mark_complete_button {
 	&:after {
 		display: none;
 	}
+}
+
+.ld-focus-comments__heading-actions {
+	display: none;
 }

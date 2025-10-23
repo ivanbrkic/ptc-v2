@@ -46,7 +46,7 @@ foreach ( $fields as $key => $field ) {
 		<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
 			<h3><?php esc_html_e( 'New account', 'woocommerce' ); ?></h3>
 				<div class="woocommerce-account-fields">
-				
+
 					<?php if ( ! $checkout->is_registration_required() ) : ?>
 
 					<p class="form-row form-row-wide create-account">
@@ -78,7 +78,7 @@ foreach ( $fields as $key => $field ) {
 				<?php
 	}
 }
+do_action( 'woocommerce_checkout_shipping' );
 ?>
-
 
 <?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>

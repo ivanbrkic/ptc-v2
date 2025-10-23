@@ -1,22 +1,3 @@
-<?php
-if ( is_checkout() ) {
-	?>
-	<div class="secure">
-	<?php
-	if ( ! is_wc_endpoint_url( 'order-received' ) ) {
-		?>
-		<img src="/wp-content/themes/ptc/assets/dist/theme/img/secure.svg" alt="secure connection">
-		<div>
-			<?php _e( 'Secure Checkout', 'ptc' ); ?>
-			<div><?php _e( '256-bit, Bank-Grade TLS Encryption', 'ptc' ); ?></div>
-		</div>
-		<?php
-	}
-	?>
-	</div>
-	<?php
-}
-?>
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 	<?php

@@ -29,7 +29,20 @@ if ( $contents ) {
 }
 if ( $item_id && get_field( 'product_landing_page_url', $item_id ) ) {
 	?>
-	<p>
+	<div class="secure">
+	<?php
+	if ( ! is_wc_endpoint_url( 'order-received' ) ) {
+		?>
+		<img src="/wp-content/themes/ptc/assets/dist/theme/img/secure.svg" alt="secure connection">
+		<div>
+			<?php _e( 'Secure Checkout', 'ptc' ); ?>
+			<div><?php _e( '256-bit, Bank-Grade TLS Encryption', 'ptc' ); ?></div>
+		</div>
+		<?php
+	}
+	?>
+	</div>
+	<p class="mb-2">
 		<a href="<?php echo esc_url( get_field( 'product_landing_page_url', $item_id ) ) ?>"><?php esc_html_e( 'Click here for more information about the course', 'ptc' ) ?></a>
 	</p>
 	<?php
@@ -66,9 +79,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
+			<!-- <div class="col-2"> -->
+				<?php // do_action( 'woocommerce_checkout_shipping' ); ?>
+			<!-- </div> -->
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>

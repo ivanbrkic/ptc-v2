@@ -1,0 +1,50 @@
+.toggle__trigger {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid var(--smoke);
+  padding-bottom: $spacer;
+	margin-top: 0 !important;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--primary);
+    border-radius: 0;
+    top: calc(50% - $spacer / 2);
+    transform: translate(0, -50%);
+
+    @at-root [dir="rtl"] & {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--white);
+    border-top: 0;
+    border-left: 0;
+    top: calc(50% - $spacer / 2);
+    transform: translate(0, -75%) rotate(45deg);
+    z-index: 1;
+
+    @at-root [dir="rtl"] & {
+      left: 11px;
+      right: auto;
+    }
+  }
+}
+
+.toggle__next {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}

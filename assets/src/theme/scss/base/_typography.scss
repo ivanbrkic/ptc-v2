@@ -106,40 +106,41 @@ dl {
 .t-h1 {
   $size: 5.2rem;
   font-size: $size;
-	font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
 
   @include media-breakpoint-down(md) {
     font-size: calc($size * .66);
   }
-	position: relative;
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: -16px;
-		left: 0;
-		width: 50px;
-		height: 5px;
-		background: $red;
-	}
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background: $red;
+  }
 }
 
 .t-h2 {
-	font-weight: var(--font-weight-normal);
-	$size: 3.2rem;
-    font-size: $size;
+  font-weight: var(--font-weight-normal);
+  $size: 3.2rem;
+  font-size: $size;
 
-    @include media-breakpoint-down(md) {
-      font-size: calc($size * .66);
-    }
+  @include media-breakpoint-down(md) {
+    font-size: calc($size * .66);
+  }
 }
 
 .t-h3 {
-	$size: 2.6rem;
-    font-size: $size;
+  $size: 2.6rem;
+  font-size: $size;
 
-    @include media-breakpoint-down(md) {
-      font-size: calc($size * .66);
-    }
+  @include media-breakpoint-down(md) {
+    font-size: calc($size * .66);
+  }
 }
 
 .t-title {

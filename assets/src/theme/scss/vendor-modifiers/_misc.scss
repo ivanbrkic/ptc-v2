@@ -23,7 +23,7 @@
   border-top: 1px solid var(--whitesmoke);
   border-bottom: 1px solid var(--whitesmoke);
   margin-top: calc($spacer * 2);
-	margin-bottom: calc($spacer * 2);
+  margin-bottom: calc($spacer * 2);
   align-items: stretch;
 
   &__button {
@@ -33,7 +33,7 @@
 
 .wp-block-file__embed[type="application/pdf"] + a,
 .wp-block-file > a:first-child {
-	@extend %reset-link;
+  @extend %reset-link;
   display: flex;
   align-items: center;
   gap: 20px;

@@ -17,9 +17,10 @@
 // List
 
 .wp-block-list {
-	> li {
-		margin-bottom: calc($spacer / 4);
-	}
+  > li {
+    margin-bottom: calc($spacer / 4);
+  }
+
   > li > .wp-block-list {
     margin-top: calc($spacer);
     margin-bottom: 0;
@@ -169,4 +170,20 @@
 
 .form-submit {
   margin-top: calc($spacer);
+}
+
+.wp-block-embed.is-type-video,
+.wp-block-video {
+  position: relative;
+
+  &::after {
+    transform: perspective(100px) rotateX(-15deg);
+    box-shadow: 0 0 16px 9px rgb(0 0 0 / .4);
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+  }
 }

@@ -43,11 +43,11 @@
 
 .push--raw {
 	color: inherit;
-	background: transparent;
+	background: $blue-transparent;
 	&:hover,
   &:focus,
   &:active {
-    background: $blue-transparent;
-		color: inherit;
+    background: $blue;
+		color: var(--white);
   }
 }

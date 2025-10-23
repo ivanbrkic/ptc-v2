@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 	<?php get_template_part( 'templates/head' ); ?>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class('woocommerce-block-theme-has-button-styles'); ?>>
 		<?php
 		/**
 		 * Use wp_body_open() so other plugins can hook in to wp_body_open hook.
